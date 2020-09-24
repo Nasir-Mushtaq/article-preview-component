@@ -114,13 +114,10 @@ width: 40px;
     fill: white;
 }
 
-  .share-icon:hover ~ .social {
+  .share-icon:hover ~ .social,   .share-icon:active ~ .social  {
     display: flex;
 }
 
-.share-icon:hover ~ svg {
-    fill: white;
-}
 
   .social {
       width: 240px;
@@ -217,14 +214,9 @@ width: 40px;
         line-height: 1.5em;
 
     }
-    
     .person {
         width: 270px;
         margin-left: 30px;
-    }
-    
-      .share-icon:hover ~ .social {
-        display: flex;
     }
     
       .social {
