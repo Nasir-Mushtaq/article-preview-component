@@ -107,14 +107,11 @@ width: 40px;
   svg {
       width: 15px;
       margin: 7px;
-      z-index: 1;
   }
 
-  svg:hover  {
-    fill: white;
-}
 
-  .share-icon:hover ~ .social,   .share-icon:active ~ .social  {
+
+  .share-icon:active ~ .social {
     display: flex;
 }
 
@@ -228,6 +225,9 @@ width: 40px;
           right: -30px;
       }
     
+      .share-icon:active ~ .social {
+        display: block;
+    }
     .arrow {
        display: none;
     }
