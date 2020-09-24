@@ -24,10 +24,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 720px;
+    width: 660px;
     height: 250px;
     border-radius: 10px;
-    /* overflow: hidden; */
     background-color: rgb(255, 255, 255);
     box-shadow: 10px 10px 20px rgba(128, 128, 128, 0.192);
 }
@@ -35,7 +34,10 @@ body {
 .image {
     width: 40%;
     height: 100%;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
 }
+
 .image img{
     width: 100%;
     height: 100%;
@@ -43,29 +45,29 @@ body {
 
 .text {
     max-height: 240px;
-    width: 432px;
+    width: 396px;
 }
 
 .intro {
-   max-width: 372px;
-   max-height: 220px;
-   margin: auto;
-
+   margin: 10px 20px 20px 30px;
 }
+
 .text h1 {
     font-size: 20px;
-    color: rgb(41, 41, 41);
+    color: hsl(217, 19%, 35%);
+    line-height: 1.2em;
 }
 
 .text p {
     font-size: 13px;
-    margin-top: 20px;
-
+    margin-top: 10px;
+    color: hsl(214, 17%, 51%);
 }
 
 .person {
+    width: 350px;
+    margin-left: 30px;
     position: relative;
-    margin-top: 20px;
 }
 
 .person img{
@@ -90,32 +92,39 @@ width: 40px;
   }
 
   .share {
-      border-radius: 50%;
-      position: absolute;
-      left: 330px;
-      top: 0px;
-      background-color: hsl(210, 46%, 95%);
-      padding: 5px;
-          /* border: 1px solid black; */
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
   }
 
-  
-  .share:hover {
-    border-radius: 50%;
-    position: absolute;
-    left: 330px;
-    top: 0px;
-    background-color: hsl(217, 19%, 35%);
-    padding: 8px;
-        /* border: 1px solid black; */
+  .share-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: hsl(210, 46%, 95%);
+  }
+ 
+  svg {
+      width: 15px;
+      margin: 7px;
+      z-index: 1;
+  }
+
+  svg:hover  {
+    fill: white;
 }
 
-  .share img {
-      width: 18px;
-  }
+  /* .share-icon:hover {
+    background-color: hsl(217, 19%, 35%);
+    filter: hue-rotate();
+} */
 
-  .share img:hover {
-    color: white;
+  .share-icon:hover ~ .social {
+    display: flex;
+}
+
+.share-icon:hover ~ svg {
+    fill: white;
 }
 
   .social {
@@ -131,13 +140,17 @@ width: 40px;
       letter-spacing: 5px;
       font-size: 14px;
       display: none;
+      position: absolute;
+      top: -70px;
+      right: -100px;
+      box-shadow: 10px 10px 20px rgba(128, 128, 128, 0.192);
+
   }
 
   .social li {
       list-style: none;
       display: inline-block;
       margin-left: 10px;
-      
   }
   
   .social ul li a img {
@@ -154,7 +167,7 @@ width: 40px;
     border-color: hsl(217, 19%, 35%)  transparent;
     border-width: 20px 20px 0 20px;
     bottom: -10px;
-    right: 220px;
+    right: 95px;
 }
 
 .attribution { 
